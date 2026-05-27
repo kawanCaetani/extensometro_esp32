@@ -2,9 +2,7 @@
 // Ponte completa com 4 extensometros ativos
 // HX711 RATE em GND = 10 Hz; RATE em VCC = 80 Hz
 // Para ESP32: cuidado com nivel logico do DOUT se o HX711 estiver em 5 V
-
-#include "HX711.h"
-
+/*filtro ativado para eliminação de ruídos de uma aplicação em chassis de carro, para fazer uma telemetria de deformação de longo prazo, para picos de deformação momentanea desativar o filtro para melhor telemetria*/
 // Ajuste conforme a ligacao no ESP32
 const uint8_t PIN_HX711_DOUT = 16;
 const uint8_t PIN_HX711_SCK  = 17;
